@@ -1,0 +1,22 @@
+1. Buat tabel latihan_1 : "CREATE TABLE latihan_1 (
+a INT UNSIGNED PRIMARY KEY AUTO_INCREMENT=100,
+b VARCHAR(10) NOT NULL DEFAULT = 'merdeka'
+) ENGINE = MYISAM CHARACTER SET 'ascii';"
+
+2. Ubah storage engine menjadi INNO DB : ALTER TABLE offices ENGINE = 'INNODB';
+
+3. Ubah nama kolom b menjadi c : "ALTER TABLE latihan_1 CHANGE b c VARCHAR(10) NOT NULL DEFAULT 'merdeka';"
+
+4. Tambah kolom b : "ALTER TABLE latihan_1 ADD b DATE DEFAULT='2018-01-01' AFTER a;"
+
+5. Buat tabel latihan_2 seperti tabel_1 : 'CREATE TABLE latihan_2 LIKE latihan_1';
+
+6. Ubah storage engine tabel latihan_2 : "ALTER TABLE offices ENGINE = 'MEMORY';"
+
+7. Ubah nama tabel latihan_2 ke latihan_3 : "ALTER TABLE latihan_2 RENAME TO latihan_3;"
+
+8. Buat temporary table dengan nama latihan_4 : "CREATE TEMPORARY TABLE latihan_4 (
+a TIMESTAMP
+);"
+
+9. Hapus semua tabel : "DROP TABLE latihan_1, latihan_3; DROP TEMPORARY TABLE latihan_4"
